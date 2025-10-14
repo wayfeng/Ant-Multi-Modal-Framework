@@ -90,11 +90,6 @@ def reduce_tensor(tensor):
 
 
 class GradientAllGather(torch.autograd.Function):
-    """
-    copy from: https://github.com/vlkit/vlkit/blob/master/vlkit/ops/distributed.py#L4-L25
-    all_gather with gradient back-propagation
-    """
-
     @staticmethod
     def forward(ctx, tensor_list, tensor):
         dist.all_gather(tensor_list, tensor)
