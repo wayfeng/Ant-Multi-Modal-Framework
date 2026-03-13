@@ -6,10 +6,8 @@ import nncf
 import numpy as np
 import torch
 import torch.utils.data as data
-from torchvision.transforms.functional import to_pil_image
 from zipfile import ZipFile
 from pathlib import Path
-from PIL import Image
 
 def normalize(arr, mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225]):
     arr = arr.astype(np.float32)
